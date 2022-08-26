@@ -1,0 +1,9 @@
+version: '3'
+services:
+  render:
+    build: ./render
+    ports:
+      - '${RENDER_PORT}:${RENDER_PORT}'
+    environment:
+      - PORT=${RENDER_PORT}
+    restart: always

@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "NodeNext",
+        "lib": ["ESNext"],
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "strictNullChecks": true,
+        "strict": true,
+        "skipLibCheck": true
+    }
+}
