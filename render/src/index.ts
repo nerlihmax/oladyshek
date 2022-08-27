@@ -14,7 +14,7 @@ app.get('/render', (req, res) => {
                 div: helper.RecipeCard({
                     name: 'Оладушек',
                     description: 'Вкусный и быстрый завтрак',
-                    image: 'https://attuale.ru/wp-content/uploads/2018/11/2566165157.jpg',
+                    image: 'https://yastatic.net/s3/home/divkit/logo.png',
                 }),
             },
         ],
