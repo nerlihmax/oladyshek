@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package oladyshek.v1;
+
+import "google/protobuf/empty.proto";
+
+service RecepiesService {
+    rpc GetRandomRecepie(google.protobuf.Empty) returns (Receipe) {}
+}
+
+message Receipe {
+    string name = 1;
+    string description = 2;
+    string thumbnail = 3;
+}

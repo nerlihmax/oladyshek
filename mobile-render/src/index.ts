@@ -1,7 +1,7 @@
 import express from 'express';
 import 'dotenv/config';
 import { divCard, rewriteRefs } from '@divkitframework/jsonbuilder';
-import { components, helper } from './components';
+import { components, helper } from './components/index';
 
 const app = express();
 
@@ -14,7 +14,7 @@ app.get('/render', (req, res) => {
                 div: helper.RecipeCard({
                     name: 'Оладушек',
                     description: 'Вкусный и быстрый завтрак',
-                    image: 'https://yastatic.net/s3/home/divkit/logo.png',
+                    thumbnail: 'https://yastatic.net/s3/home/divkit/logo.png',
                 }),
             },
         ],
@@ -25,5 +25,5 @@ app.get('/render', (req, res) => {
 
 const port = process.env.PORT ?? 3000;
 app.listen(port, () => {
-    console.log(`running on http://localhost:${port} 🚀`);
+    console.log(`mobile-render-service running on http://localhost:${port} 🚀`);
 });

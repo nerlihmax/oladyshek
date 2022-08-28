@@ -1,0 +1,17 @@
+version: '3'
+services:
+  mobile-render:
+    build: ./mobile-render-service
+    ports:
+      - '${MOBILE_RENDER_PORT}:${MOBILE_RENDER_PORT}'
+    environment:
+      - PORT=${MOBILE_RENDER_PORT}
+    restart: always
+
+  recepies:
+    build: ./recepies-service
+    ports:
+      - '${RECEPIES_SERVICE_PORT}:${RECEPIES_SERVICE_PORT}'
+    environment:
+      - PORT=${RECEPIES_SERVICE_PORT}
+    restart: always

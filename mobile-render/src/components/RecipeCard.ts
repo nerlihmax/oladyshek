@@ -1,12 +1,19 @@
 import { DivContainer, DivGrid, DivImage, DivText, reference } from '@divkitframework/jsonbuilder';
 
+/**
+ * Компонент карточки рецепта
+ *
+ * - name - название блюда
+ * - description - описание блюда
+ * - thumbnail - url до картинки
+ */
 export const RecipeCard = new DivContainer({
     items: [
         new DivGrid({
             column_count: 3,
             items: [
                 new DivImage({
-                    image_url: reference('image'),
+                    image_url: reference('thumbnail'),
                     paddings: {
                         top: 8,
                         bottom: 8,
