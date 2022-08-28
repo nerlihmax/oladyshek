@@ -1,0 +1,9 @@
+type Recepie {
+    name: String
+    description: String
+    image: String
+}
+
+type Query {
+    recepies: [Recepie]
+}

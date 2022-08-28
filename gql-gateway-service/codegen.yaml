@@ -1,0 +1,9 @@
+schema: ./src/schema.graphql
+generates:
+  ./gql-gen.ts:
+    config:
+      mappers:
+        Recepie: ./proto-gen/oladyshek/v1/Recepie#Recepie__Output
+    plugins:
+      - typescript
+      - typescript-resolvers

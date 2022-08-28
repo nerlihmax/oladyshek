@@ -1,5 +1,5 @@
 {
-    "name": "@oladyshek/mobile-render-service",
+    "name": "@oladyshek/mobile-render",
     "version": "1.0.0",
     "scripts": {
         "dev": "nodemon src/index.ts",

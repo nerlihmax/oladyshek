@@ -3,9 +3,15 @@
 BASEDIR=$(dirname "$0")
 cd ${BASEDIR}/..
 
-for d in ./*-service ; do
+TYPESCRIPT_CONSUMERS=( \
+    "./recepies-service" \
+    "./gql-gateway-service" \
+)
+
+for d in ${TYPESCRIPT_CONSUMERS[@]} ; do
     DEST=${d}/proto-gen
 
+    echo "generating typescipt defenitions for ${d}"
     rm -rf ${DEST}
     mkdir -p ${DEST}
 
@@ -13,5 +19,5 @@ for d in ./*-service ; do
         --defaults \
         --grpcLib=@grpc/grpc-js \
         --outDir=${DEST} \
-        ./*-service/**/*.proto
+        ./proto/*.proto
 done

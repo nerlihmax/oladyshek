@@ -1,5 +1,7 @@
 # Oladyshek
 
+Площадка для распространения кулинарных рецептов.
+
 ## Сервисы
 
 ### [recepies-service](https://github.com/nerlihmax/oladyshek/tree/main/recepies-service)
@@ -24,17 +26,25 @@
 
 Отвечает за пользователей и их профайлы.
 
--   ответственный: [@kheynov](https://github.com/kheynov)
+-   ответственный: [@nerlihmax](https://github.com/nerlihmax)
 
 ## Клиенты
 
 ### [mobile](https://github.com/nerlihmax/oladyshek/tree/main/mobile)
 
--   ответственный: [@kheynov](https://github.com/kheynov)
+Мобильное нативное приложения для Android.
+
+-   ответственный: [@nerlihmax](https://github.com/nerlihmax)
 
 ### [mobile-render](https://github.com/nerlihmax/oladyshek/tree/main/mobile-render)
 
-Рендерит DivKit-верстку для мобильных устройств
+Рендерит DivKit-верстку для мобильных устройств.
+
+-   ответственный: [@kheynov](https://github.com/kheynov)
+
+### [super-admin](https://github.com/nerlihmax/oladyshek/tree/main/super-admin)
+
+Мониторинг, логи, аналитика, статистика, CMS.
 
 -   ответственный: [@nerlihmax](https://github.com/nerlihmax)
 
@@ -42,6 +52,7 @@
 
 -   Сервисы должны общаться между собой только через gRPC.
 -   Папки сервисов должны заканчиваться на `-service` для подхвата кодгена.
--   Proto-файлы держим в корнях папки сервиса в папке `proto`.
--   Скрипт для кодгена [`./scripts/proto-generate.sh`](https://github.com/nerlihmax/oladyshek/tree/main/scripts/proto-generate.sh).
+-   Proto-файлы держим в корне репозитория в [`/proto`](https://github.com/nerlihmax/oladyshek/tree/main/proto).
+-   Скрипт для кодгена [`/scripts/proto-generate.sh`](https://github.com/nerlihmax/oladyshek/tree/main/scripts/proto-generate.sh).
 -   Сгенерированный код будет лежать в папке `proto-gen`.
+-   Скрипт для копирования /proto в корень каждого сервиса : [`/scripts/copy-proto.sh`](https://github.com/nerlihmax/oladyshek/tree/main/scripts/copy-proto.sh)

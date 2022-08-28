@@ -11,5 +11,5 @@ service RecepiesService {
 message Receipe {
     string name = 1;
     string description = 2;
-    string thumbnail = 3;
+    string image = 3;
 }

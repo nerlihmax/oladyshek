@@ -1,0 +1,29 @@
+{
+    "name": "@oladyshek/gql-gateway-service",
+    "version": "1.0.0",
+    "scripts": {
+        "dev": "nodemon src/index.ts",
+        "start": "ts-node src/index.ts",
+        "generate:gql": "graphql-codegen"
+    },
+    "devDependencies": {
+        "@graphql-codegen/cli": "^2.11.8",
+        "@graphql-codegen/typescript": "^2.7.3",
+        "@graphql-codegen/typescript-resolvers": "^2.7.3",
+        "@types/node": "^18.7.6",
+        "nodemon": "^2.0.19",
+        "typescript": "^4.7.4"
+    },
+    "dependencies": {
+        "@graphql-tools/graphql-file-loader": "^7.5.3",
+        "@graphql-tools/load": "^7.7.5",
+        "@graphql-tools/merge": "^8.3.4",
+        "@graphql-tools/schema": "^9.0.2",
+        "@grpc/grpc-js": "^1.6.10",
+        "@grpc/proto-loader": "^0.7.2",
+        "apollo-server": "^3.10.2",
+        "dotenv": "^16.0.1",
+        "graphql": "^16.6.0",
+        "ts-node": "^10.9.1"
+    }
+}

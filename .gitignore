@@ -2,3 +2,6 @@ node_modules/
 proto-gen/
 .env
 .DS_Store
+proto/
+!/proto
+gql-gen.ts

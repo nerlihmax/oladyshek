@@ -8,10 +8,18 @@ services:
       - PORT=${MOBILE_RENDER_PORT}
     restart: always
 
-  recepies:
+  recepies-service:
     build: ./recepies-service
     ports:
       - '${RECEPIES_SERVICE_PORT}:${RECEPIES_SERVICE_PORT}'
     environment:
       - PORT=${RECEPIES_SERVICE_PORT}
+    restart: always
+
+  gql-gateway-service:
+    build: ./gql-gateway-service
+    ports:
+      - '${GQL_GATEWAY_SERVICE_PORT}:${GQL_GATEWAY_SERVICE_PORT}'
+    environment:
+      - PORT=${GQL_GATEWAY_SERVICE_PORT}
     restart: always

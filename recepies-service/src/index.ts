@@ -14,22 +14,20 @@ const handlers: RecepiesServiceHandlers = {
         const stub: Receipe = {
             name: 'Оладушки',
             description: 'Вкусный и сытный завтрак и приятные воспоминания из детства',
-            thumbnail: 'https://thumbsnap.com/i/K3w8vSC7.jpg',
+            image: 'https://thumbsnap.com/i/K3w8vSC7.jpg',
         };
 
         callback(null, stub);
     },
 };
 
-const loadProto = async <T>(path: string) => {
-    const definitions = await protoLoader.load(path);
+const loadProto = async <T>(relativePath: string) => {
+    const definitions = await protoLoader.load(path.resolve(__dirname, relativePath));
     return grpc.loadPackageDefinition(definitions) as unknown as T;
 };
 
 const bootstrap = async () => {
-    const recepiesService = await loadProto<ProtoGrpcType>(
-        path.resolve(__dirname, '../proto/recepies-service.proto'),
-    );
+    const recepiesService = await loadProto<ProtoGrpcType>('../proto/recepies-service.proto');
 
     const server = new grpc.Server();
 
@@ -42,7 +40,7 @@ const bootstrap = async () => {
         } else {
             server.start();
 
-            console.log(`recepies-service is running on localhost:${PORT}`);
+            console.log(`recepies-service is running on 0.0.0.0:${PORT}`);
         }
     });
 };
