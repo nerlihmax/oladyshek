@@ -8,25 +8,19 @@
 
 Отдает и обрабатывает данные рецептов.
 
--   ответственный: [@nerlihmax](https://github.com/nerlihmax)
 
 ### [gql-gateway-service](https://github.com/nerlihmax/oladyshek/tree/main/gql-gateway-service)
 
 Предоставляет GraphQL API для любых клиентов.
 
--   ответственный: [@nerlihmax](https://github.com/nerlihmax)
-
 ### [auth-service](https://github.com/nerlihmax/oladyshek/tree/main/auth-service)
 
 Отвечает за авторизацию/аутентификацию.
 
--   ответственный: [@kheynov](https://github.com/kheynov)
 
 ### [profiles-service](https://github.com/nerlihmax/oladyshek/tree/main/profiles-service)
 
 Отвечает за пользователей и их профайлы.
-
--   ответственный: [@nerlihmax](https://github.com/nerlihmax)
 
 ## Клиенты
 
@@ -34,23 +28,19 @@
 
 Мобильное нативное приложения для Android.
 
--   ответственный: [@nerlihmax](https://github.com/nerlihmax)
 
 ### [mobile-render](https://github.com/nerlihmax/oladyshek/tree/main/mobile-render)
 
 Рендерит DivKit-верстку для мобильных устройств.
 
--   ответственный: [@kheynov](https://github.com/kheynov)
 
 ### [super-admin](https://github.com/nerlihmax/oladyshek/tree/main/super-admin)
 
 Мониторинг, логи, аналитика, статистика, CMS.
 
--   ответственный: [@nerlihmax](https://github.com/nerlihmax)
 
 ## gRPC
 
--   Сервисы должны общаться между собой только через gRPC.
 -   Папки сервисов должны заканчиваться на `-service` для подхвата кодгена.
 -   Proto-файлы держим в корне репозитория в [`/proto`](https://github.com/nerlihmax/oladyshek/tree/main/proto).
 -   Скрипт для кодгена [`/scripts/proto-generate.sh`](https://github.com/nerlihmax/oladyshek/tree/main/scripts/proto-generate.sh).
